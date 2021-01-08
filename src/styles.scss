@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+body {
+    background-color: black;
+    font-family: 'VT323', monospace;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+h1 {
+    color: rgba(255, 255, 255, 0.7);
+}

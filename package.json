@@ -1,0 +1,21 @@
+{
+  "name": "genuary",
+  "version": "1.0.0",
+  "description": "Lets see how it goes",
+  "author": "mynjj",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "lodash": "^4.17.20",
+    "p5": "^1.2.0"
+  },
+  "devDependencies": {
+    "css-loader": "^5.0.1",
+    "sass": "^1.32.2",
+    "sass-loader": "^10.1.0",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.12.1",
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
+  }
+}
