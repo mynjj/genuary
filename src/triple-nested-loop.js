@@ -18,6 +18,7 @@ const sketch = p => {
   p.setup = () => {
     p.createCanvas(width, height);
     p.strokeWeight(3);
+    p.noCursor();
     p.stroke(15, 65, 10, 160);
     p.fill(15, 65, 10, 105);
   };
@@ -26,7 +27,7 @@ const sketch = p => {
   const blastRadius = 200; // px
   const maxBlastSpeed = 200; // px/s
   const minBlastSpeed = 50; // px/s
-  const blastDecay = 0.0001;// px/s^2
+  const blastDecay = 0.1;// px/s^2
   const removeThreshold = 10; //px
 
   p.draw = () => {
@@ -44,7 +45,7 @@ const sketch = p => {
           p.fill(color);
           p.circle(x, y, radius+u);
           circles[i][j][k][0] += up*p.deltaTime;
-          circles[i][j][k][1] -= blastDecay*p.deltaTime;
+          circles[i][j][k][1] -= blastDecay*p.deltaTime/1000;
           if(up<0 && u < removeThreshold){
             toRemove.push(k);
           }
@@ -74,7 +75,6 @@ const sketch = p => {
         }
       }
     }
-    console.log(circles);
   };
 };
 
