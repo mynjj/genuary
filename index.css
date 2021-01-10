@@ -1,0 +1,21 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+}
+
+body{
+    background-color: #2e3261;
+    height: 100%;
+}
+main{
+    width: 80%;
+    margin: auto;
+}
+h1,h2,a{
+    color: #bdc2ff;
+}
+.sketch-card{
+    background-color: #0e1241;
+    padding: 15px 10px;
+    margin: 10px 0;
+}
