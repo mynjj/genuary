@@ -1,16 +1,26 @@
+const _ = require('lodash/fp');
 const path = require('path');
+const HandlebarsPlugin = require('handlebars-webpack-plugin');
+
+const sketches = [
+  'triple-nested-loop',
+  'rule-30'
+];
+
+const toEntryPoint = v=>path.resolve('src', v, 'code.js');
+const getEntries = _.flow(
+  _.keyBy(_.identity),
+  _.mapValues(toEntryPoint)
+);
 
 module.exports = {
   mode: 'development',
-  entry: {
-    'triple-nested-loop': './src/triple-nested-loop.js',
-    'rule-30': './src/rule-30.js'
-  },
+  entry: getEntries(sketches),
   devServer: {
     contentBase: './dist'
   },
   output: {
-    filename: '[name].js',
+    filename: '[name]/code.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -24,5 +34,14 @@ module.exports = {
         ]
       }
     ]
-  }
+  },
+  plugins: [
+    new HandlebarsPlugin({
+      entry: path.resolve(__dirname, 'src', '**', '*.hbs'),
+      output: path.resolve(__dirname, 'dist', '[path]', '[name].html'),
+      helpers: {
+        toCode: name=>`https://github.com/mynjj/genuary/blob/main/src/${name}/code.js`
+      }
+    })
+  ]
 };

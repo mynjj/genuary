@@ -10,12 +10,14 @@
     "publish": "webpack && gh-pages -d dist"
   },
   "dependencies": {
+    "handlebars": "^4.7.6",
     "lodash": "^4.17.20",
     "p5": "^1.2.0"
   },
   "devDependencies": {
     "css-loader": "^5.0.1",
     "gh-pages": "^3.1.0",
+    "handlebars-webpack-plugin": "^2.2.1",
     "sass": "^1.32.2",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",

@@ -1,0 +1,42 @@
+html {
+    font-family: 'Dancing Script', cursive;
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.frame{
+    padding: 4em;
+    border: solid 50px;
+    background-color: #fff7ff;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 0;
+}
+
+a{
+    color: black;
+}
+
+.info{
+    text-align: center;
+    background-color: white;
+    border: 1px solid;
+    width: 100px;
+    padding: 10px 5px;
+    position: absolute;
+    right: -40px;
+    bottom: -40px;
+}
