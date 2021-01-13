@@ -4,7 +4,8 @@ const HandlebarsPlugin = require('handlebars-webpack-plugin');
 
 const sketches = [
   'triple-nested-loop',
-  'rule-30'
+  'rule-30',
+  'curve-only'
 ];
 
 const toEntryPoint = v=>path.resolve('src', v, 'code.js');
