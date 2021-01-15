@@ -6,7 +6,7 @@ It's meant to be a prompt for every day of January, but more realistically this 
 
 Feel free to have a [look](https://mynjj.github.io/genuary). Keep in mind, they are thought with a Desktop First UX, since they're mainly just toys for myself.
 
-The project has a webpack configurations using handlebars and p5.js, but I'm open to explore more.
+The project has a webpack configuration using handlebars and p5.js, but I'm open to explore more.
 
 # Development
 
